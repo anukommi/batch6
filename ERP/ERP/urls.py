@@ -24,9 +24,9 @@ from sales.views import fun_sales
 from purchase.views import fun_purchase
 
 def fun(request):
-	#return "Hello Django"
-	#return HttpResponse("Hello Djano")
-	return HttpResponse("<h1>Hello Django</h1>")
+    #return "Hello Django"
+    #return HttpResponse("Hello Djano")
+    return HttpResponse("<h1>Hello Django</h1>")
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -37,3 +37,15 @@ urlpatterns = [
     url(r'sales', fun_sales),
     url(r'purchase', fun_purchase),
 ]
+
+
+
+
+    
+
+
+
+
+
+
+
