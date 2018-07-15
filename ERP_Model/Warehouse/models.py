@@ -7,7 +7,7 @@ from django.db import models
 class Location(models.Model):
 	warehouse_name=models.CharField(max_length=250)
 	warehouse_address=models.TextField()
-	mobile=models.IntegerField()
+	mobile=models.CharField(max_length=250)
 	email=models.EmailField()
 
 	class Meta:
@@ -16,9 +16,11 @@ class Location(models.Model):
 
 class Warehouse(models.Model):
 	manager_name=models.CharField(max_length=250)
+	warehou_key=models.ForeignKey(Location)
 	workers_count=models.IntegerField()	
 	workers_salary=models.IntegerField()
-	rack_storage=models.IntegerField()
+	rack_storage=models.IntegerField()	
+	# warehou=models.ManyToManyField(Location)
 
 	class Meta:
 		db_table="warehouse"
