@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Study Space</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    table,th,td{
+      border:3px solid black;
+      border-collapse: collapse;s
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>STUDY SPACE</h2>
+  <p>This is for study space</p>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#menu1">Study Hall</a></li>
+    <li><a data-toggle="tab" href="#menu2">Enquiry</a></li>
+    <li><a data-toggle="tab" href="#menu3">Expenses</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="menu1" class="tab-pane fade">
+      <h3>STUDY HALLS</h3>
+      <p>This page showing study halls</p>
+      <p>{{halls}}</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Area</th>
+        </tr>      
+        {% for hall in halls%}
+        <tr>
+            <td>{{hall.name}}</td>
+            <td>{{hall.area}}</td>
+        </tr>      
+        {% endfor %} 
+      </table>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Enquiries</h3>
+      <p>This page showing Enquiries</p>
+      <p> {{enqs}}</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Course</th>
+          <th>Student</th>
+        </tr>      
+        {% for e in enqs %}
+        <tr>
+            <td>{{e.name}}</td>
+            <td>{{e.course}}</td>
+            <td>{{e.student}}</td>
+        </tr>      
+        {% endfor %} 
+      </table>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Expenses</h3>
+      <p>This page showing Expenses</p>
+      <p> {{exps}}</p>
+      <table>
+        <tr>
+          <th>Studyhall</th>
+          <th>Date</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Value</th>
+        </tr>      
+        {% for exp in exps%}
+        <tr>
+            <td>{{exp.studyhall}}</td>
+            <td>{{exp.date}}</td>
+            <td>{{exp.name}}</td>
+            <td>{{exp.desc}}</td>
+            <td>{{exp.value}}</td>
+        </tr>      
+        {% endfor %} 
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
