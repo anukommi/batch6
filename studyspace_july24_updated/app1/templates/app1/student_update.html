@@ -1,0 +1,8 @@
+<form method="post">
+	{% csrf_token %}
+	<input type="text" name="student_name" value={{student.name}}>
+	<input type="text" name="student_address" value={{student.address}}>
+	<input type="text" name="student_phone" value={{student.phone}}>
+	<input type="text" name="student_email" value={{student.email}}>	
+	<input type="submit" name="" value="UPDATE STUDENT">
+</form>

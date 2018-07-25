@@ -1,0 +1,6 @@
+<form method="post">
+	{% csrf_token %}
+	<input type="text" name="hall_name", value="{{data.name}}">
+	<input type="text" name="hall_area", value="{{data.area}}">
+	<input type="submit" name="" value="UPDATE HALL">
+</form>

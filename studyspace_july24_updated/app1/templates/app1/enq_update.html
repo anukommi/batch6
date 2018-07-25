@@ -1,0 +1,8 @@
+<form method="post">
+	{% csrf_token %}
+	<input type="text" name="enq_id" value={{enq.id}}>
+	<input type="text" name="enq_course" value={{enq.course}}>
+	<input type="text" name="enq_student" value={{enq.student}}>	
+	<input type="submit" name="" value="UPDATE ENQUIRY">
+
+</form>
